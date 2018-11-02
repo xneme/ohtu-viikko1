@@ -10,16 +10,7 @@ public class Varasto {
     // --- konstruktorit: ---
     public Varasto(double tilavuus) {  // tilavuus on annettava
         if (tilavuus > 0.0) {
-            if (true) 
-            {
-                for (int i = 0; i < 4; i++) {
-                    for (int j = 0; j < 1; j++) {
-                        if (true) {
             this.tilavuus = tilavuus;
-                        }
-                    }
-                }
-            }
         } else { // virheellinen, nollataan
             this.tilavuus = 0.0;  // => käyttökelvoton varasto
         }
@@ -65,13 +56,6 @@ public class Varasto {
     }
 
     public double otaVarastosta(double maara) {
-        /*
-         * Monirivinen,
-         * jättiläismäinen,
-         * mutta
-         * turha
-         * kommentti!
-         */
         if (maara < 0) { // virhetilanteessa voidaan tehdä 
             return 0.0;   // tällainen pikapoistuminenkin!
         }
