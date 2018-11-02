@@ -31,7 +31,27 @@ public class StatisticsTest {
     }  
     
     @Test
-    public void alwaysTrue() {
-        assertEquals(true, true);
+    public void searchReturnsRightPlayer() {
+        assertEquals(new Player("Kurri", "EDM", 37, 53).toString(), stats.search("Kurri").toString());
+    }
+    
+    @Test
+    public void searchingUnknownPlayerReturnsNull() {
+        assertEquals(null, stats.search("Paavo Väyrynen"));
+    }
+    
+    @Test
+    public void teamReturnsATeam() {
+        assertEquals(3, stats.team("EDM").size());
+    }
+    
+    @Test
+    public void topScorersReturnsRightSizeList() {
+        assertEquals(2, stats.topScorers(2).size());
+    }
+    
+    @Test
+    public void topScorersIsSorted() {
+        assertEquals(new Player("Gretzky", "EDM", 35, 89).toString(), stats.topScorers(5).get(0).toString());
     }
 }
