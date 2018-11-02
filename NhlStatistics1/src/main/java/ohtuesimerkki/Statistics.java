@@ -8,7 +8,7 @@ import java.util.List;
 public class Statistics {
 
     private List<Player> players;
-    Reader reader;
+    private Reader reader;
 
     public Statistics(Reader reader) {
         this.reader = reader;
